@@ -1,3 +1,7 @@
+output "postgresql_flexible_server_active_directory_administrators_id" {
+  description = "Map of id values across all postgresql_flexible_server_active_directory_administrators, keyed the same as var.postgresql_flexible_server_active_directory_administrators"
+  value       = { for k, v in azurerm_postgresql_flexible_server_active_directory_administrator.postgresql_flexible_server_active_directory_administrators : k => v.id }
+}
 output "postgresql_flexible_server_active_directory_administrators_object_id" {
   description = "Map of object_id values across all postgresql_flexible_server_active_directory_administrators, keyed the same as var.postgresql_flexible_server_active_directory_administrators"
   value       = { for k, v in azurerm_postgresql_flexible_server_active_directory_administrator.postgresql_flexible_server_active_directory_administrators : k => v.object_id }
